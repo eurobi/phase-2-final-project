@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -35,4 +35,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar{
+  background-color: #282c34;
+  display: flex;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  height: 50px;
+  font-size: medium;
+  align-items: center;
+
+}
+
+.navItem, .navItem:visited{
+  margin-left: 5%;
+  color: white;
+  text-decoration: none;
+  /* height: 100%;
+  background-color: blue;
+  padding-left: 1%;
+  padding-right: 1%; */
+
 }
