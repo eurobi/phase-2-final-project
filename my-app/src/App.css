@@ -13,29 +13,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .navbar{
   background-color: #282c34;
@@ -58,4 +35,21 @@
   padding-left: 1%;
   padding-right: 1%; */
 
+}
+
+#title{
+  position: fixed;
+  margin-left: 43%;
+}
+
+#review-list{
+  background-color: blue;
+}
+
+.card{
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 2%;
 }
