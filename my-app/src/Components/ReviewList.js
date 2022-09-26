@@ -1,10 +1,11 @@
 import Review from "./Review";
 
-function ReviewList(){
+function ReviewList({ reviews }){
+    const reviewElements = reviews.map((review) => <Review key={review.title} review={review} />)
+    console.log(reviewElements)
     return(
     <div id='review-list'>
-        <Review></Review>
-        <Review></Review>
+        {reviewElements}
     </div>
     )
 }
