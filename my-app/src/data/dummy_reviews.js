@@ -1,4 +1,4 @@
-const reviews = [
+const dummyreviews = [
     {
         id: 1,
         title: 'Project Hail Mary',
@@ -29,4 +29,4 @@ const reviews = [
     }
 ]
 
-export default reviews
+export default dummyreviews
