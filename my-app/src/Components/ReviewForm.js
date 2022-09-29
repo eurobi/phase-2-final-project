@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
+
+
 
 function ReviewForm({ addReview }){
     const [formData, setFormData] = useState({
@@ -14,12 +17,14 @@ function ReviewForm({ addReview }){
         "Shows",
         "Restaurants",
     ]
+    const history = useHistory()
     function handleSubmit(e){
         e.preventDefault()
         const newReview = {...formData}
         addReview(newReview)
+        history.push("/")
+
     }
-    console.log(formData)
     return(
         <div className="form-container">
             <form onSubmit={handleSubmit} className="review-form">
@@ -31,7 +36,7 @@ function ReviewForm({ addReview }){
                 <label for='review-name'>Title</label>
                     <input id='review-name' value={formData.title} onChange={(e) => setFormData({...formData, title: e.target.value})}></input>
                 <label for='review-content' >Review</label>
-                    <input id='review-content' value={formData.content} onChange={(e) => setFormData({...formData, content: e.target.value})}></input>
+                    <textarea id='review-content' value={formData.content} onChange={(e) => setFormData({...formData, content: e.target.value})}></textarea>
                 <label for='rating'>Rating</label>
                     <select id='rating' value={formData.rating} onChange={(e) => setFormData({...formData, rating: e.target.value})}>
                         <option>0</option>
@@ -41,7 +46,7 @@ function ReviewForm({ addReview }){
                         <option>4</option>
                         <option>5</option>
                     </select>
-                <input type='submit' value='Submit'></input>
+                <input id='submit-button' type='submit' value='Add Review'></input>
             </form>
         </div>
     )

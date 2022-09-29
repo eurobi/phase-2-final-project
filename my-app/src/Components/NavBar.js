@@ -6,8 +6,8 @@ function NavBar(){
     return(
         <div className='navbar'>
             <NavLink className='navItem' to='/'>Reviews</NavLink>
-            <NavLink className='navItem' to='/'>+ Add Review</NavLink>
-            <h1 id='title'>MeView</h1>
+            <NavLink className='navItem' to='/new-review'>+ Add Review</NavLink>
+            <NavLink className='navItem' to='/your-favorites'>Your Favorites</NavLink>
         </div>
     )
 }

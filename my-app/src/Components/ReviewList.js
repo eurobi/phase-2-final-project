@@ -1,8 +1,7 @@
 import Review from "./Review";
 
-function ReviewList({ reviews }){
-    const reviewElements = reviews.map((review) => <Review key={review.title} review={review} />)
-    console.log(reviewElements)
+function ReviewList({ reviews, deleteReview }){
+    const reviewElements = reviews.map((review) => <Review key={review.title} deleteReview={deleteReview} review={review} />)
     return(
     <div id='review-list'>
         {reviewElements}

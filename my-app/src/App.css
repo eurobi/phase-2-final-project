@@ -16,19 +16,16 @@
 }
 
 .navItem, .navItem:visited{
-  margin-left: 5%;
+  margin-left: 25px;
   color: white;
   text-decoration: none;
-  /* height: 100%;
-  background-color: blue;
-  padding-left: 1%;
-  padding-right: 1%; */
 
 }
 
 #title{
-  position: fixed, top;
-  margin-left: 15%;
+  position: fixed;
+  margin-left: 45%;
+  width: 5%;
 
 }
 
@@ -68,6 +65,67 @@
   background-color: #282c34;
   padding: 20px;
   border-radius: 10px;
+  color: white;
+}
+
+input, select{
+  border-radius: 5px;
+  border-width: 1px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 20px;
+}
+
+#review-content{
+  height: 200px;
+}
+
+.form-container{
+  margin-top: 50px;
+}
+
+.review-card-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  color: black;
+  background-color: rgb(226, 75, 64);
+  width: 50px;
+  margin-left: 10px;
+
+}
+
+.edit-button{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  color: black;
+  background-color: rgb(255, 208, 0);
+  width: 50px;
+
+
+}
+
+.button-div{
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  align-items: center;
+}
+
+#submit-button{
+  height: 50px;
+  width: 200px;
+  align-self: center;
+  margin-top: 20px;
+  border-style: none;
+  background-color: rgb(54, 170, 54);
   color: white;
 }
 
