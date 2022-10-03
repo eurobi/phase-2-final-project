@@ -136,7 +136,26 @@ input, select{
 }
 
 .fav-div{
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  width: 80%;
+  margin: 10px;
+  border-radius: 5px;
+}
 
+.fav-list{
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.fav-item{
+  background-color: #eeff2d;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #282c34;
 }
 
 

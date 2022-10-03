@@ -41,6 +41,13 @@
       "content": "Dexter is such an incredible show for the first few seasons and then it ends horribly ",
       "rating": "4",
       "id": 7
+    },
+    {
+      "category": "Books",
+      "title": "test",
+      "content": "test",
+      "rating": "5",
+      "id": 8
     }
   ]
 }
