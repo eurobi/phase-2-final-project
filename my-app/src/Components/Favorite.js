@@ -4,7 +4,6 @@ function Favorite({ category, reviews }){
     const fiveStarReviews = reviews.filter(review => {
         return review.category === category && review.rating.toString() === "5"
     })
-    console.log(reviews)
     return (
         <div className="fav-div">
             <h3>{category}</h3>

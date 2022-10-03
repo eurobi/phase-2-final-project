@@ -15,7 +15,7 @@ function Review({ deleteReview, review }){
     }
 
     function handleEditClick(){
-        history.push(`/edit-review/${review}`)
+        history.push(`/edit-review/${review.id}`)
     }
 
    

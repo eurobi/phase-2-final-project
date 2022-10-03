@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 
-
-function ReviewForm({ addReview, editReview }){
-    const [reqType, setReqType] = useState("POST")
+function ReviewForm({ addReview}){
+    const params = useParams()
 
     const [formData, setFormData] = useState({
         category: "",
@@ -20,6 +19,20 @@ function ReviewForm({ addReview, editReview }){
         "Restaurants",
     ]
     const history = useHistory()
+
+    if(params.id !== undefined  && formData.title === ""){
+        fetch(`http://localhost:3000/reviews/${params.id}`)
+            .then(resp => resp.json())
+            .then(review => {
+                setFormData({
+                    category: review.category,
+                    title: review.title,
+                    content: review.content,
+                    rating: review.rating
+                })
+            })
+    }
+
     function handleSubmit(e){
         e.preventDefault()
         const newReview = {...formData}

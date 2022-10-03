@@ -80,7 +80,7 @@ function App() {
           <Route exact path ='/new-review'>
             <ReviewForm addReview={addReview} />
           </Route>
-          <Route path ='/edit-review'>
+          <Route path ='/edit-review/:id'>
             <ReviewForm editReview={editReview} />
           </Route>
           <Route exact path ='/your-favorites'>
