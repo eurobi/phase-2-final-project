@@ -8,9 +8,7 @@ function Filters({ filters, setFilters }){
     ]
     const sortOptions = [
         "Rating (High to Low)",
-        "Rating (Low to High)",
-        "Date (Newest)",
-        "Date (Oldest)"
+        "Rating (Low to High)"
     ]
     function handleFilterChange(e){
         setFilters({...filters, 
@@ -36,13 +34,13 @@ function Filters({ filters, setFilters }){
             <div className="filter-item">
                 <label for="filter-by">Filter By:</label>
                 <select value={filters.filter} onChange={handleFilterChange} id='filter-by'>
-                    {categories.map((category) => <option>{category}</option>)}
+                    {categories.map((category) => <option key={category}>{category}</option>)}
                 </select>
             </div>
             <div className="filter-item">
                 <label for="sort-by">Sort By:</label>
                 <select value={filters.sort} onChange={handleSortChange} id='sort-by'>
-                    {sortOptions.map((option) => <option>{option}</option>)}
+                    {sortOptions.map((option) => <option key={option}>{option}</option>)}
                 </select>
             </div>
             <div className="filter-item">

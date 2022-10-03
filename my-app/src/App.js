@@ -64,6 +64,11 @@ function App() {
     setReviews(newReviews)
   }
 
+  //PATCH review
+  function editReview(id){
+
+  }
+
   return (
     <div>
         <NavBar />
@@ -75,8 +80,8 @@ function App() {
           <Route exact path ='/new-review'>
             <ReviewForm addReview={addReview} />
           </Route>
-          <Route>
-            <Favorites />
+          <Route exact path ='/your-favorites'>
+            <Favorites reviews={reviews}/>
           </Route>
         </Switch>
     </div>

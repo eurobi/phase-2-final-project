@@ -1,3 +1,4 @@
+
 function Review({ deleteReview, review }){
     function handleStars(rating){
         let stars = []
@@ -11,12 +12,14 @@ function Review({ deleteReview, review }){
         return stars.join('')
     }
 
+   
+
     return(
         <div className='card'>
             <div className="review-card-header">
                 <h1>{review.title}</h1>
                 <div className="button-div">
-                    <button className="edit-button">Edit</button>
+                    <button id={review.id} className="edit-button">Edit</button>
                     <button id={review.id} onClick={(e) => deleteReview(e.target.id)} className="delete-button">Delete</button>
                 </div>
             </div>

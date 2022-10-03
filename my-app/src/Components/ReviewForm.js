@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 
 
-function ReviewForm({ addReview }){
+function ReviewForm({ addReview, id }){
     const [formData, setFormData] = useState({
         category: "",
         title: "",
@@ -31,7 +31,7 @@ function ReviewForm({ addReview }){
             <h1>New Review</h1>
                 <label for='category'>Category</label>
                 <select id='category' value={formData.category} onChange={(e) => setFormData({...formData, category: e.target.value})}>
-                    {categories.map(category => <option>{category}</option>)}
+                    {categories.map(category => <option key={category}>{category}</option>)}
                 </select>
                 <label for='review-name'>Title</label>
                     <input id='review-name' value={formData.title} onChange={(e) => setFormData({...formData, title: e.target.value})}></input>
