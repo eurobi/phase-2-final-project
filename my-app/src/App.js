@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { Route, Switch, useHistory } from "react-router-dom";
 
 function App() {
+  const history = useHistory()
   // Reviews State
   const [reviews, setReviews] = useState([])
 
@@ -65,8 +66,18 @@ function App() {
   }
 
   //PATCH review
-  function editReview(id){
-
+  function editReview(id, data){
+    const newReviews = [...reviews]
+    newReviews[id] = data
+    setReviews(newReviews)
+    history.push('/')
+    fetch(`http://localhost:3000/reviews/${id}`,{
+      method : 'PATCH',
+      headers : {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
   }
 
   return (

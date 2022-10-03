@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useHistory, useParams } from "react-router-dom";
 
 
-function ReviewForm({ addReview}){
+function ReviewForm({ addReview , editReview}){
     const params = useParams()
 
     const [formData, setFormData] = useState({
@@ -36,8 +36,14 @@ function ReviewForm({ addReview}){
     function handleSubmit(e){
         e.preventDefault()
         const newReview = {...formData}
-        addReview(newReview)
+        if(params.id === undefined){
+            addReview(newReview)
         history.push("/")
+        }
+        else{
+            editReview(params.id, newReview)
+        }
+        
     }
 
 
