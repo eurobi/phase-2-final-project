@@ -69,7 +69,7 @@ function ReviewForm({ addReview , editReview}){
                         <option>4</option>
                         <option>5</option>
                     </select>
-                <input id='submit-button' type='submit' value='Add Review'></input>
+                <input id='submit-button' type='submit' value={params.id? "Submit Edits" : "Submit Review"}></input>
             </form>
         </div>
     )
