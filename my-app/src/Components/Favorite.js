@@ -6,7 +6,7 @@ function Favorite({ category, reviews }){
     })
     console.log(reviews)
     return (
-        <div>
+        <div className="fav-div">
             <h1>{category}</h1>
             <ul>
                 {fiveStarReviews.map(review => <li key={review.title}>{review.title}</li>)}
