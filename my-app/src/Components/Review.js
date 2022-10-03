@@ -1,5 +1,7 @@
+import { useHistory } from "react-router-dom";
 
 function Review({ deleteReview, review }){
+    const history = useHistory()
     function handleStars(rating){
         let stars = []
         for(let i = 1; i <= 5; i ++){
@@ -12,6 +14,10 @@ function Review({ deleteReview, review }){
         return stars.join('')
     }
 
+    function handleEditClick(){
+        history.push(`/edit-review/${review}`)
+    }
+
    
 
     return(
@@ -19,7 +25,7 @@ function Review({ deleteReview, review }){
             <div className="review-card-header">
                 <h1>{review.title}</h1>
                 <div className="button-div">
-                    <button id={review.id} className="edit-button">Edit</button>
+                    <button id={review.id} onClick={handleEditClick} className="edit-button">Edit</button>
                     <button id={review.id} onClick={(e) => deleteReview(e.target.id)} className="delete-button">Delete</button>
                 </div>
             </div>

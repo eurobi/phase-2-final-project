@@ -3,7 +3,9 @@ import { useHistory } from "react-router-dom";
 
 
 
-function ReviewForm({ addReview, id }){
+function ReviewForm({ addReview, editReview }){
+    const [reqType, setReqType] = useState("POST")
+
     const [formData, setFormData] = useState({
         category: "",
         title: "",
@@ -23,8 +25,10 @@ function ReviewForm({ addReview, id }){
         const newReview = {...formData}
         addReview(newReview)
         history.push("/")
-
     }
+
+
+
     return(
         <div className="form-container">
             <form onSubmit={handleSubmit} className="review-form">
