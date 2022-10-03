@@ -44,7 +44,6 @@ function App() {
 
   //POST new review
   function addReview(newReview){
-    setReviews([...reviews, newReview])
     fetch('http://localhost:3000/reviews',{
       method : 'POST',
       headers : {
@@ -52,10 +51,17 @@ function App() {
       },
       body: JSON.stringify(newReview)
     })
+      .then(resp => resp.json())
+      .then(data => {
+        newReview.id = data.id
+        setReviews([...reviews, newReview])
+      })
+
   }
 
   //DELETE review
   function deleteReview(id){
+    console.log(id)
     const newReviews = reviews.filter((review) => {
       return review.id.toString() !== id.toString()
     })
@@ -67,10 +73,7 @@ function App() {
 
   //PATCH review
   function editReview(id, data){
-    const newReviews = [...reviews]
-    newReviews[id] = data
-    setReviews(newReviews)
-    history.push('/')
+    data.id = id
     fetch(`http://localhost:3000/reviews/${id}`,{
       method : 'PATCH',
       headers : {
@@ -78,6 +81,11 @@ function App() {
       },
       body: JSON.stringify(data)
     })
+    console.log(reviews)
+    const newReviews = [...reviews].filter(review => review.id.toString() !== id.toString())
+    newReviews.push(data)
+    setReviews(newReviews)
+    history.push('/')
   }
 
   return (
