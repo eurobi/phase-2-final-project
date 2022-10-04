@@ -26,7 +26,7 @@ User can navigate to 'my favorites' to see all of their 5 star reviews.
 
 # FUNCTIONALITY - HOW IT WORKS
 
-React Components
+React Components:
 - Navbar: uses Link componenets for navigation
 - ReviewList: maps through review state and creates a Review component for each review
 - Review: Each individual review

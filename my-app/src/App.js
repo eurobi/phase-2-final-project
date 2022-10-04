@@ -61,7 +61,6 @@ function App() {
 
   //DELETE review
   function deleteReview(id){
-    console.log(id)
     const newReviews = reviews.filter((review) => {
       return review.id.toString() !== id.toString()
     })
@@ -81,7 +80,6 @@ function App() {
       },
       body: JSON.stringify(data)
     })
-    console.log(reviews)
     const newReviews = [...reviews].filter(review => review.id.toString() !== id.toString())
     newReviews.push(data)
     setReviews(newReviews)
