@@ -47,7 +47,27 @@ function ReviewForm({ addReview , editReview}){
         
     }
 
+    function handleStarClick(e){
+        if(e.target.id[0].toString() !== formData.rating.toString()){
+            setFormData({...formData, rating: e.target.id[0]})
+        }
+        else{
+            setFormData({...formData, rating: 0})
+        }
+        
+    }
 
+    function starElements(){
+        const stars = []
+        for(let i = 1; i < 6; i++){
+            stars.push(
+                <h1 className='star-elements' key={i} id={`${i}-star`} onClick={handleStarClick}>
+                    {i <= formData.rating? '★' : '☆'}
+                </h1>
+            )
+        }
+        return stars
+    }
 
     return(
         <div className="form-container">
@@ -61,15 +81,9 @@ function ReviewForm({ addReview , editReview}){
                     <input id='review-name' value={formData.title} onChange={(e) => setFormData({...formData, title: e.target.value})}></input>
                 <label for='review-content' >Review</label>
                     <textarea id='review-content' value={formData.content} onChange={(e) => setFormData({...formData, content: e.target.value})}></textarea>
-                <label for='rating'>Rating</label>
-                    <select id='rating' value={formData.rating} onChange={(e) => setFormData({...formData, rating: e.target.value})}>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                    <div id='stars'>
+                        {starElements()}
+                    </div>
                 <input id={params.id? 'submit-edit-button' : "submit-button"} type='submit' value={params.id? "Submit Edit" : "Submit Review"}></input>
             </form>
         </div>

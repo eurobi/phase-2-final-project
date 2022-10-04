@@ -168,5 +168,14 @@ input, select{
   color: #282c34;
 }
 
+#stars{
+  display: flex;
+  color: #eeff2d;
+}
+
+#rating-label{
+  margin-top: 15px;
+}
+
 
 
