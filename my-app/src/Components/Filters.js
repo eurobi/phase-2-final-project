@@ -5,6 +5,7 @@ function Filters({ filters, setFilters }){
         "Movies",
         "Shows",
         "Restaurants",
+        "Music"
     ]
     const sortOptions = [
         "Rating (High to Low)",

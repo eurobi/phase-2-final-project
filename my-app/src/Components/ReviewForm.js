@@ -17,6 +17,7 @@ function ReviewForm({ addReview , editReview}){
         "Movies",
         "Shows",
         "Restaurants",
+        "Music"
     ]
     const history = useHistory()
 
