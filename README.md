@@ -4,6 +4,14 @@
 
 This is a Reviews app, where a user can keep all of their reviews for movies, shows, books, and more, all in one place. The app is a single page application built in React.
 
+# INSTALLATION/USAGE
+
+1. NPM install - installs required packages
+2. json-server --watch db.json - starts server on local host 3000
+3. NPM start - starts page on local host 3001
+
+
+
 # FUNCTIONALITY - USER FACING
 
 User's reviews load onto the home page.
