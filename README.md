@@ -12,7 +12,7 @@ This is a Reviews app, where a user can keep all of their reviews for movies, sh
 
 
 
-# FUNCTIONALITY - USER FACING
+# FUNCTIONALITY
 
 User's reviews load onto the home page.
 
