@@ -32,7 +32,7 @@ User can fill out and submit the add review form.
 
 User can navigate to 'my favorites' to see all of their 5 star reviews.
 
-# FUNCTIONALITY - HOW IT WORKS
+# REACT COMPONENTS
 
 React Components:
 - Navbar: uses Link componenets for navigation
